@@ -1,1 +1,298 @@
-<h1>This is Test Website</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Behuli Makeup</title>
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body{
+    background:#0f0f0f;
+    color:#fff;
+  }
+
+  /* NAVBAR */
+  header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index:1000;
+    border-bottom:1px solid gold;
+  }
+
+  .navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 50px;
+    align-items:center;
+  }
+
+  .logo{
+    font-size:26px;
+    font-weight:bold;
+    color:gold;
+    letter-spacing:2px;
+  }
+
+  .nav-links a{
+    color:#fff;
+    margin:0 15px;
+    text-decoration:none;
+  }
+
+  .nav-links a:hover{
+    color:gold;
+  }
+
+  /* HERO */
+  .hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-top:60px;
+  }
+
+  .hero h1{
+    font-size:60px;
+    color:gold;
+  }
+
+  .hero p{
+    font-size:18px;
+    margin:10px 0 20px;
+  }
+
+  .btn{
+    padding:12px 25px;
+    background:gold;
+    color:#000;
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+  }
+
+  /* SECTION */
+  section{
+    padding:80px 50px;
+    text-align:center;
+  }
+
+  h2{
+    color:gold;
+    margin-bottom:30px;
+    font-size:32px;
+  }
+
+  /* SERVICES */
+  .services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+
+  .card{
+    background:#1a1a1a;
+    padding:25px;
+    border:1px solid gold;
+    border-radius:12px;
+    transition:0.3s;
+  }
+
+  .card:hover{
+    transform:translateY(-10px);
+  }
+
+  /* PRICING */
+  .pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+
+  .price-card{
+    background:#141414;
+    padding:30px;
+    border:1px solid gold;
+    border-radius:15px;
+  }
+
+  .price{
+    font-size:28px;
+    color:gold;
+    margin:10px 0;
+  }
+
+  .price-card ul{
+    list-style:none;
+    margin:15px 0;
+  }
+
+  .price-card ul li{
+    margin:8px 0;
+  }
+
+  /* OFFER */
+  .offer{
+    background:linear-gradient(45deg, #1a1a1a, #000);
+    border-top:1px solid gold;
+    border-bottom:1px solid gold;
+  }
+
+  .offer h2{
+    font-size:38px;
+  }
+
+  .offer p{
+    font-size:18px;
+    margin-top:10px;
+  }
+
+  /* CONTACT */
+  form{
+    max-width:500px;
+    margin:auto;
+  }
+
+  input, textarea{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border-radius:5px;
+    border:none;
+  }
+
+  footer{
+    padding:20px;
+    text-align:center;
+    border-top:1px solid gold;
+    color:gold;
+  }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo">BEHULI MAKEUP</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#offer">Offer</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>Luxury Bridal Beauty</h1>
+    <p>Where elegance meets perfection ✨</p>
+    <button class="btn">Book Appointment</button>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Premium Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Bridal Makeup</h3>
+      <p>Royal bridal transformation with long-lasting glow.</p>
+    </div>
+    <div class="card">
+      <h3>HD Party Makeup</h3>
+      <p>Flawless high-definition makeup for events.</p>
+    </div>
+    <div class="card">
+      <h3>Hair Styling</h3>
+      <p>Elegant buns, curls & modern hairstyles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Bridal Packages</h2>
+
+  <div class="pricing">
+
+    <div class="price-card">
+      <h3>Basic Glow</h3>
+      <div class="price">$99</div>
+      <ul>
+        <li>Light Bridal Makeup</li>
+        <li>Basic Hairstyle</li>
+        <li>1 Hour Session</li>
+      </ul>
+      <button class="btn">Choose</button>
+    </div>
+
+    <div class="price-card">
+      <h3>Royal Bride</h3>
+      <div class="price">$199</div>
+      <ul>
+        <li>HD Bridal Makeup</li>
+        <li>Premium Hair Styling</li>
+        <li>Jewelry Setting</li>
+      </ul>
+      <button class="btn">Most Popular</button>
+    </div>
+
+    <div class="price-card">
+      <h3>Luxury Queen</h3>
+      <div class="price">$349</div>
+      <ul>
+        <li>Full Bridal Package</li>
+        <li>HD + Airbrush Makeup</li>
+        <li>Pre-Wedding Shoot Look</li>
+        <li>Home Service</li>
+      </ul>
+      <button class="btn">Book VIP</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- OFFER -->
+<section id="offer" class="offer">
+  <h2>🎁 Special Offer</h2>
+  <p>Book your bridal package today and get <b>FREE party makeup for engagement</b> + 20% discount on advance booking!</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact & Booking</h2>
+
+  <form>
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email Address" required />
+    <input type="date" />
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button class="btn" type="submit">Send Request</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Behuli Makeup | Luxury Bridal Studio ✨
+</footer>
+
+</body>
+</html>
