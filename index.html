@@ -616,13 +616,13 @@
     <!-- WhatsApp Float -->
     <a href="https://wa.me/9779800000000" target="_blank" class="whatsapp-float">💬</a>
 
-    <!-- Popup -->
-    <div id="domainPopup" class="popup">
+    <!-- Sales Popup - For Selling Domain & Website -->
+<div id="domainPopup" class="popup">
     <div class="popup-content">
         <h2>Want This Exact Website?</h2>
-        <p style="font-size: 17px; margin: 18px 0 25px; line-height: 1.5;">
-            Premium Behuli Makeup website + domain is now available for sale<br><br>
-            <strong style="color: var(--crimson); font-size: 20px;">Price: Rs. 50,000 Only</strong>
+        <p style="font-size: 17px; margin: 18px 0 25px;">
+            Complete ready-to-use website + domain available for sale<br>
+            <strong style="color: var(--crimson); font-size: 19px;">Only Rs. 50,000</strong>
         </p>
         
         <button onclick="contactForWebsite()" class="popup-btn">
@@ -630,8 +630,12 @@
         </button>
         
         <button onclick="closePopup()" class="popup-close">
-            Maybe Later
+            No, thanks
         </button>
+        
+        <p style="margin-top: 20px; font-size: 13.5px; color: #777;">
+            Includes: Full code, domain, design, and Instagram integration
+        </p>
     </div>
 </div>
 
@@ -706,9 +710,9 @@
         }
 
         function contactForWebsite() {
-            window.location.href = "mailto:diwaspandey524@gmail.com?subject=I%20want%20a%20professional%20website%20like%20Behuli%20Makeup&body=Hi%20Diwash,%0A%0AI%20saw%20the%20Behuli%20Makeup%20website%20and%20I%20would%20like%20to%20get%20a%20similar%20modern%20website%20with%20my%20own%20domain.";
-            closePopup();
-        }
+    window.location.href = "mailto:diwaspandey524@gmail.com?subject=I%20want%20to%20buy%20Behuli%20Makeup%20Website%20-%2050k&body=Hi%20Diwash,%0A%0AI%20saw%20the%20Behuli%20Makeup%20website%20and%20I%20would%20like%20to%20purchase%20this%20complete%20website%20(with%20domain)%20for%20Rs.%2050,000.%0A%0APlease%20share%20the%20details.";
+    closePopup();
+}
 
         // Initialize on load
         window.addEventListener('load', () => {
