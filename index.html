@@ -16,11 +16,13 @@
 
     <style>
         :root {
-            --maroon: #9C2A4A;
-            --deep-maroon: #7A1F38;
-            --gold: #f4c095;
-            --soft-pink: #fff0f5;
-        }
+    --crimson: #9C1C2B;        /* Main Crimson Red */
+    --deep-crimson: #7A0F1F;   /* Darker shade for hover */
+    --crimson-dark: #5C0A18;   /* Used in footer */
+    --gold: #f4c095;           /* Kept gold for accents */
+    --soft-gold: #e8b57a;
+    --light-bg: #fff8f5;       /* Very light pinkish background */
+}
        
         * { margin:0; padding:0; box-sizing:border-box; }
        
@@ -56,7 +58,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 26px;
             font-weight: 700;
-            color: var(--maroon);
+            color: var(--crimson);
         }
        
         .nav-links {
@@ -75,13 +77,13 @@
             font-size: 15px;
         }
        
-        .nav-links a:hover { color: var(--maroon); }
+        .nav-links a:hover { color: var(--crimson); }
        
         .hamburger {
             display: block;
             font-size: 28px;
             cursor: pointer;
-            color: var(--maroon);
+            color: var(--crimson);
         }
        
         @media (min-width: 768px) {
@@ -142,7 +144,7 @@
        
         .btn {
             padding: 15px 35px;
-            background: var(--maroon);
+            background: var(--crimson);
             color: white;
             border-radius: 50px;
             text-decoration: none;
@@ -152,7 +154,7 @@
         }
        
         .btn:hover {
-            background: var(--deep-maroon);
+            background: var(--deep-crimson);
             transform: translateY(-3px);
         }
 
@@ -172,7 +174,7 @@
             font-size: clamp(32px, 6.5vw, 44px);
             text-align: center;
             margin-bottom: 18px;
-            color: var(--maroon);
+            color: var(--crimson);
         }
        
         .section-subtitle {
@@ -194,20 +196,20 @@
             background: white;
             border-radius: 24px;
             padding: 35px 25px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+            box-shadow: 0 12px 40px rgba(156,28,43,0.08);
             text-align: center;
         }
        
         .service-card h3 {
             font-size: 22px;
             margin: 15px 0 12px;
-            color: var(--maroon);
+            color: var(--crimson);
         }
        
         .price {
             font-size: 21px;
             font-weight: 600;
-            color: var(--maroon);
+            color: var(--crimson);
             margin-bottom: 18px;
         }
        
@@ -241,7 +243,7 @@
 
         /* TESTIMONIALS - FIXED */
         .love-section {
-            background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+            background: linear-gradient(135deg, #fff0f3, #ffe4e9);
         }
        
         .testimonials {
@@ -260,7 +262,7 @@
             background: white;
             padding: 38px 25px;
             border-radius: 28px;
-            box-shadow: 0 15px 50px rgba(209, 63, 111, 0.12);
+            box-shadow: 0 15px 50px rgba(156,28,43,0.1);
             text-align: center;
             margin: 0 10px;
         }
@@ -276,7 +278,7 @@
        
         .slide-author {
             font-weight: 600;
-            color: var(--maroon);
+            color: var(--crimson);
             margin-bottom: 4px;
         }
        
@@ -308,14 +310,14 @@
         }
        
         .dot.active {
-            background: var(--maroon);
+            background: var(--crimson);
             width: 13px;
             height: 13px;
         }
 
         /* FOOTER */
         footer {
-            background: #222;
+           background: var(--crimson-dark);
             color: #ddd;
             padding: 60px 20px 40px;
         }
@@ -400,14 +402,14 @@
         }
        
         .popup-content h2 {
-            color: var(--maroon);
+            color: var(--crimson);
             margin-bottom: 15px;
         }
        
         .popup-btn {
             width: 100%;
             padding: 16px;
-            background: var(--maroon);
+            background: var(--crimson);
             color: white;
             border: none;
             border-radius: 50px;
