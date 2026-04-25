@@ -1,291 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Behuli Makeup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Behuli Makeup - Premium Nepali Bridal Makeup Artist in Kathmandu. Specializing in traditional red & gold bridal looks, engagement, sangeet & reception makeup.">
+    <meta name="keywords" content="Nepali bridal makeup, Kathmandu bridal makeup, Behuli Makeup, red gold bridal look, Nepali wedding makeup artist">
+    <meta name="author" content="Behuli Makeup">
+    <title>Behuli Makeup | Premium Nepali Bridal Makeup Artist Kathmandu</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --maroon: #9C2A4A;
+            --deep-maroon: #7A1F38;
+            --gold: #f4c095;
+            --soft-pink: #fff0f5;
+        }
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(156,42,74,0.1);
+        }
+        
+        .navbar {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--maroon);
+        }
+        
+        .nav-links {
+            display: none;
+            gap: 25px;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .nav-links a:hover { color: var(--maroon); }
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
-}
+        /* Hamburger */
+        .hamburger {
+            display: block;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--maroon);
+        }
+        
+        @media (min-width: 768px) {
+            .hamburger { display: none; }
+        }
 
-body{
-  background:linear-gradient(135deg,#fff0f5,#ffe4ec);
-  color:#333;
-  overflow-x:hidden;
-}
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            background: white;
+            transform: translateY(-100%);
+            transition: transform 0.4s ease;
+            z-index: 1050;
+            padding: 90px 30px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mobile-menu.active {
+            transform: translateY(0);
+        }
+        
+        .mobile-menu a {
+            padding: 18px 0;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+        }
 
-/* NAV */
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(10px);
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  z-index:999;
-}
+        /* HERO */
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)), 
+                        url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover no-repeat;
+            color: white;
+            padding: 20px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 8.5vw, 72px);
+            margin-bottom: 18px;
+        }
+        
+        .hero p {
+            font-size: clamp(17px, 4.5vw, 21px);
+            max-width: 520px;
+            margin: 0 auto 28px;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            background: var(--maroon);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: var(--deep-maroon);
+            transform: translateY(-3px);
+        }
 
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 40px;
-}
+        /* SECTIONS */
+        section {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            section { padding: 110px 40px; }
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 6.5vw, 44px);
+            text-align: center;
+            margin-bottom: 18px;
+            color: var(--maroon);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 17px;
+            color: #666;
+            max-width: 580px;
+            margin: 0 auto 50px;
+        }
 
-.logo{
-  font-size:26px;
-  font-weight:700;
-  color:#d81b60;
-}
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin: 15px 0 12px;
+            color: var(--maroon);
+        }
+        
+        .price {
+            font-size: 21px;
+            font-weight: 600;
+            color: var(--maroon);
+            margin-bottom: 18px;
+        }
+        
+        .service-card ul {
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
 
-.nav-links{
-  display:flex;
-  gap:25px;
-}
+        /* PORTFOLIO & INSTAGRAM */
+        .portfolio-grid, .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        
+        .reel-container {
+            aspect-ratio: 9 / 16;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
 
-.nav-links a{
-  text-decoration:none;
-  color:#333;
-  font-weight:500;
-  transition:0.3s;
-}
+        /* LOVE FROM BRIDES */
+        .love-section {
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+        }
+        
+        .testimonials {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.8s ease;
+        }
+        
+        .slide {
+            min-width: 100%;
+            background: white;
+            padding: 38px 25px;
+            border-radius: 28px;
+            box-shadow: 0 15px 50px rgba(209, 63, 111, 0.12);
+            text-align: center;
+        }
+        
+        .stars {
+            color: #f4c095;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .slide p {
+            font-size: 16.5px;
+            line-height: 1.75;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        
+        .dots {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 6px;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background: var(--maroon);
+            width: 13px;
+            height: 13px;
+        }
 
-.nav-links a:hover{
-  color:#d81b60;
-}
+        /* FOOTER - Social icons now pure white */
+        footer {
+            background: #222;
+            color: #ddd;
+            padding: 60px 20px 40px;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-content { grid-template-columns: repeat(3, 1fr); text-align: left; }
+        }
+        
+        .footer-col h3 {
+            color: var(--gold);
+            margin-bottom: 18px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-top: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .social-icons { justify-content: flex-start; }
+        }
+        
+        .social-icons a {
+            color: #ffffff;           /* Pure white as requested */
+            font-size: 26px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--gold);
+        }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-  background:url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover no-repeat;
-  position:relative;
-}
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+            z-index: 999;
+        }
 
-.hero::after{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.55);
-}
-
-.hero-content{
-  position:relative;
-  color:#fff;
-  max-width:700px;
-  animation:fadeUp 1.2s ease;
-}
-
-.hero h1{
-  font-size:60px;
-}
-
-.hero p{
-  margin:15px 0;
-  font-size:18px;
-}
-
-.btn{
-  display:inline-block;
-  padding:12px 25px;
-  background:#ff2e7a;
-  color:#fff;
-  border-radius:30px;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#d81b60;
-  transform:scale(1.05);
-}
-
-/* SECTIONS */
-section{
-  padding:80px 40px;
-  text-align:center;
-}
-
-h2{
-  font-size:34px;
-  color:#d81b60;
-  margin-bottom:30px;
-}
-
-/* CARDS */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(10px);
-  padding:20px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-}
-
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-}
-
-.gallery img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  border-radius:20px;
-  transition:0.4s;
-}
-
-.gallery img:hover{
-  transform:scale(1.05);
-}
-
-/* REVIEWS */
-.review{
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(10px);
-  padding:20px;
-  border-radius:20px;
-}
-
-.stars{
-  color:gold;
-  margin:10px 0;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* ANIMATION */
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .hero h1{font-size:40px;}
-  .nav-links{display:none;}
-}
-</style>
+        /* POPUP */
+        .popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.75);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+        
+        .popup-content {
+            background: white;
+            max-width: 400px;
+            width: 100%;
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .popup-content h2 {
+            color: var(--maroon);
+            margin-bottom: 15px;
+        }
+        
+        .popup-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--maroon);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        
+        .popup-close {
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Behuli Makeup</div>
+            <div class="hamburger" id="hamburger">☰</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#instagram">Reels</a>
+                <a href="#reviews">Stories</a>
+            </div>
+        </div>
+    </header>
 
-<header>
-  <div class="navbar">
-    <div class="logo">Behuli Makeup</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#reviews">Reviews</a>
-    </div>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Glow Like a Queen 👑</h1>
-    <p>Premium Bridal Makeup for Nepali Brides with Elegance & Style</p>
-    <a href="#portfolio" class="btn">View Portfolio</a>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card">💄 Bridal Makeup</div>
-    <div class="card">💍 Engagement Look</div>
-    <div class="card">💇 Hair Styling</div>
-    <div class="card">✨ HD Party Makeup</div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2>Nepali Bridal Looks</h2>
-  <div class="gallery">
-
-    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
-    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
-    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-    <img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
-    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702">
-
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews">
-  <h2>Happy Brides 💕</h2>
-
-  <div class="grid">
-
-    <div class="review">
-      <p>"I felt like a real Nepali bride queen 👑"</p>
-      <div class="stars">★★★★★</div>
-      <b>- Sita</b>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+        <a href="#instagram" onclick="toggleMenu()">Reels</a>
+        <a href="#reviews" onclick="toggleMenu()">Stories</a>
     </div>
 
-    <div class="review">
-      <p>"Makeup stayed perfect all day!"</p>
-      <div class="stars">★★★★★</div>
-      <b>- Anjali</b>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Glow Like a Nepali Queen 👑</h1>
+            <p>Timeless bridal makeup blending red & gold traditions with modern elegance</p>
+            <a href="#services" class="btn">See Services & Prices</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" style="background: var(--soft-pink);">
+        <h2>Our Signature Services</h2>
+        <p class="section-subtitle">Premium makeup crafted for Nepali brides</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <span style="font-size:48px;">👰</span>
+                <h3>Full Bridal Makeup + Hair</h3>
+                <div class="price">Rs. 18,000 – 28,000</div>
+                <ul>
+                    <li>✔ HD waterproof foundation & long-lasting base</li>
+                    <li>✔ Traditional red & gold eye makeup</li>
+                    <li>✔ Sindoor glow and perfect lip shade</li>
+                    <li>✔ Elegant hair styling with traditional accessories</li>
+                    <li>✔ Dupatta setting & final touch-up</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <span style="font-size:48px;">💍</span>
+                <h3>Engagement / Sagun Look</h3>
+                <div class="price">Rs. 10,000 – 14,000</div>
+                <ul>
+                    <li>✔ Soft natural glam with dewy finish</li>
+                    <li>✔ Subtle tikka & jhumka friendly makeup</li>
+                    <li>✔ Fresh glowing skin</li>
+                    <li>✔ Elegant hair styling included</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <span style="font-size:48px;">🌸</span>
+                <h3>Reception / Sangeet Glam</h3>
+                <div class="price">Rs. 14,000 – 20,000</div>
+                <ul>
+                    <li>✔ Bold dramatic eye makeup</li>
+                    <li>✔ Shimmery highlighter & contour</li>
+                    <li>✔ Statement lips & lashes</li>
+                    <li>✔ Party-ready long-lasting finish</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <span style="font-size:48px;">✨</span>
+                <h3>Party & Bridesmaid Makeup</h3>
+                <div class="price">Rs. 5,000 – 9,000</div>
+                <ul>
+                    <li>✔ Customizable intensity</li>
+                    <li>✔ Group booking discounts available</li>
+                    <li>✔ Matching family looks</li>
+                    <li>✔ Quick & flawless application</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <h2>Nepali Bridal Portfolio</h2>
+        <p class="section-subtitle">Real brides • Timeless red & gold • Modern elegance</p>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Bridal"></div>
+            <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Bridal"></div>
+            <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Bridal"></div>
+            <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Bridal"></div>
+        </div>
+    </section>
+
+    <!-- BEHIND THE GLOW -->
+    <section id="instagram" class="instagram-section">
+        <h2>Behind the Glow ✨</h2>
+        <p class="section-subtitle">Watch our latest Instagram Reels</p>
+        
+        <div class="insta-grid">
+            <div class="reel-container">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXf32AoEr3Q/" data-instgrm-version="14"></blockquote>
+            </div>
+            <div class="reel-container">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DVLD-tbk7OT/" data-instgrm-version="14"></blockquote>
+            </div>
+            <div class="reel-container">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWIzJAAEYiO/" data-instgrm-version="14"></blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOVE FROM OUR BRIDES -->
+    <section id="reviews" class="love-section">
+        <h2>Love from Our Brides 💕</h2>
+        <p class="section-subtitle">Heartfelt words from real Nepali queens</p>
+        
+        <div class="testimonials">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <div class="stars">★★★★★</div>
+                    <p>"I felt like a real Nepali Queen! The makeup stayed perfect through all rituals. Best decision for my wedding."</p>
+                    <div class="slide-author">Sita Sharma</div>
+                    <div class="author-location">Kathmandu</div>
+                </div>
+                <div class="slide">
+                    <div class="stars">★★★★★</div>
+                    <p>"Perfect blend of tradition and modern glam. Everyone complimented my look all day long!"</p>
+                    <div class="slide-author">Anjali Thapa</div>
+                    <div class="author-location">Pokhara</div>
+                </div>
+                <div class="slide">
+                    <div class="stars">★★★★★</div>
+                    <p>"Incredible attention to detail. My photos still look flawless months later."</p>
+                    <div class="slide-author">Priya KC</div>
+                    <div class="author-location">Lalitpur</div>
+                </div>
+            </div>
+            <div class="dots" id="dots"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Behuli Makeup</h3>
+                <p>Premium Nepali Bridal Makeup Artist<br>Kathmandu, Nepal</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>WhatsApp: <strong>+977 9800000000</strong></p>
+                <p>Email: behuli.makeup@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/behuli.makeup" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/behuli.makeup" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com/@behuli.makeup" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:50px; font-size:14px; color:#888;">
+            © 2026 Behuli Makeup. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/9779800000000" target="_blank" class="whatsapp-float">💬</a>
+
+    <!-- WEBSITE SELLING POPUP -->
+    <div id="domainPopup" class="popup">
+        <div class="popup-content">
+            <h2>Love this design?</h2>
+            <p>Want a professional, modern website like this for your own business with a custom domain?</p>
+            <button onclick="contactForWebsite()" class="popup-btn">Yes, I Want My Own Website</button>
+            <button onclick="closePopup()" class="popup-close">No, thanks</button>
+        </div>
     </div>
 
-    <div class="review">
-      <p>"Highly professional and elegant look."</p>
-      <div class="stars">★★★★☆</div>
-      <b>- Priya</b>
-    </div>
+    <script>
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-  </div>
-</section>
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+        }
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/9779800000000" target="_blank">
-📞 Book on WhatsApp
-</a>
+        hamburger.addEventListener('click', toggleMenu);
 
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        });
+
+        // Instagram Embed
+        (function() {
+            var s = document.createElement('script');
+            s.src = "https://www.instagram.com/embed.js";
+            s.async = true;
+            document.body.appendChild(s);
+        })();
+
+        // Testimonial Slider
+        let currentSlide = 0;
+        const slidesContainer = document.getElementById('slides');
+        const totalSlides = 3;
+
+        function createDots() {
+            const dotsContainer = document.getElementById('dots');
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }, 5200);
+
+        // Popup Functions
+        function showPopup() {
+            document.getElementById('domainPopup').style.display = 'flex';
+        }
+        function closePopup() {
+            document.getElementById('domainPopup').style.display = 'none';
+        }
+        function contactForWebsite() {
+            window.location.href = "mailto:diwaspandey524@gmail.com?subject=I%20want%20a%20professional%20website%20like%20Behuli%20Makeup&body=Hi%20Diwash,%0A%0AI%20saw%20the%20Behuli%20Makeup%20website%20and%20I%20would%20like%20to%20get%20a%20similar%20modern%20website%20with%20my%20own%20domain.";
+            closePopup();
+        }
+
+        window.addEventListener('load', () => {
+            createDots();
+            setTimeout(showPopup, 8000);
+        });
+    </script>
 </body>
 </html>
