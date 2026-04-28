@@ -7,25 +7,23 @@
     <meta name="keywords" content="Nepali bridal makeup, Kathmandu bridal makeup, Behuli Makeup, red gold bridal look, Nepali wedding makeup artist">
     <title>बेहुली Makeup | Premium Nepali Bridal Makeup Artist Kathmandu</title>
 
-    <!-- Performance improvements -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         :root {
-    --crimson: #9C1C2B;        /* Main Crimson Red */
-    --deep-crimson: #7A0F1F;   /* Darker shade for hover */
-    --crimson-dark: #5C0A18;   /* Used in footer */
-    --gold: #f4c095;           /* Kept gold for accents */
-    --soft-gold: #e8b57a;
-    --light-bg: #fff8f5;       /* Very light pinkish background */
-}
-       
-        * { margin:0; padding:0; box-sizing:border-box; }
-       
+            --crimson: #9C1C2B;
+            --deep-crimson: #7A0F1F;
+            --crimson-dark: #5C0A18;
+            --gold: #f4c095;
+            --soft-gold: #e8b57a;
+            --light-bg: #fff8f5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Inter', system-ui, sans-serif;
             background: #fff;
@@ -33,7 +31,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-       
+
         /* HEADER */
         header {
             position: fixed;
@@ -44,7 +42,7 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(156,42,74,0.1);
         }
-       
+
         .navbar {
             max-width: 1400px;
             margin: 0 auto;
@@ -53,44 +51,36 @@
             justify-content: space-between;
             align-items: center;
         }
-       
+
+        .logo-link { text-decoration: none; color: inherit; }
+
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 26px;
             font-weight: 700;
             color: var(--crimson);
         }
-       
-        .nav-links {
-            display: none;
-            gap: 25px;
-        }
-       
-        @media (min-width: 768px) {
-            .nav-links { display: flex; }
-        }
-       
+
+        .nav-links { display: none; gap: 25px; }
+        @media (min-width: 768px) { .nav-links { display: flex; } }
+
         .nav-links a {
             text-decoration: none;
             color: #444;
             font-weight: 500;
             font-size: 15px;
         }
-       
         .nav-links a:hover { color: var(--crimson); }
-       
+
         .hamburger {
             display: block;
             font-size: 28px;
             cursor: pointer;
             color: var(--crimson);
         }
-       
-        @media (min-width: 768px) {
-            .hamburger { display: none; }
-        }
+        @media (min-width: 768px) { .hamburger { display: none; } }
 
-        /* Mobile Menu */
+        /* MOBILE MENU */
         .mobile-menu {
             position: fixed;
             top: 0; left: 0;
@@ -103,11 +93,22 @@
             display: flex;
             flex-direction: column;
         }
-       
-        .mobile-menu.active {
-            transform: translateY(0);
+        .mobile-menu.active { transform: translateY(0); }
+
+        /* ✕ close button */
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 30px;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--crimson);
+            background: none;
+            border: none;
+            padding: 0;
         }
-       
+
         .mobile-menu a {
             padding: 18px 0;
             font-size: 18px;
@@ -129,19 +130,21 @@
             color: white;
             padding: 20px;
         }
-       
+
+        /* FIX: was h2 — changed to h1 for SEO */
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(42px, 8.5vw, 72px);
+            font-size: clamp(32px, 6.5vw, 58px);
             margin-bottom: 18px;
+            color: white;
         }
-       
+
         .hero p {
             font-size: clamp(17px, 4.5vw, 21px);
             max-width: 520px;
             margin: 0 auto 28px;
         }
-       
+
         .btn {
             padding: 15px 35px;
             background: var(--crimson);
@@ -151,12 +154,9 @@
             font-weight: 600;
             font-size: 16px;
             display: inline-block;
+            transition: background 0.2s, transform 0.2s;
         }
-       
-        .btn:hover {
-            background: var(--deep-crimson);
-            transform: translateY(-3px);
-        }
+        .btn:hover { background: var(--deep-crimson); transform: translateY(-3px); }
 
         /* SECTIONS */
         section {
@@ -164,11 +164,8 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-       
-        @media (min-width: 768px) {
-            section { padding: 110px 40px; }
-        }
-       
+        @media (min-width: 768px) { section { padding: 110px 40px; } }
+
         h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(32px, 6.5vw, 44px);
@@ -176,7 +173,7 @@
             margin-bottom: 18px;
             color: var(--crimson);
         }
-       
+
         .section-subtitle {
             text-align: center;
             font-size: 17px;
@@ -191,7 +188,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
-       
+
         .service-card {
             background: white;
             border-radius: 24px;
@@ -199,26 +196,12 @@
             box-shadow: 0 12px 40px rgba(156,28,43,0.08);
             text-align: center;
         }
-       
-        .service-card h3 {
-            font-size: 22px;
-            margin: 15px 0 12px;
-            color: var(--crimson);
-        }
-       
-        .price {
-            font-size: 21px;
-            font-weight: 600;
-            color: var(--crimson);
-            margin-bottom: 18px;
-        }
-       
-        .service-card ul {
-            text-align: left;
-            font-size: 15px;
-            line-height: 1.8;
-            color: #555;
-        }
+
+        .service-card h3 { font-size: 22px; margin: 15px 0 12px; color: var(--crimson); }
+
+        .price { font-size: 21px; font-weight: 600; color: var(--crimson); margin-bottom: 18px; }
+
+        .service-card ul { text-align: left; font-size: 15px; line-height: 1.8; color: #555; }
 
         /* PORTFOLIO & INSTAGRAM */
         .portfolio-grid, .insta-grid {
@@ -226,14 +209,14 @@
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 18px;
         }
-       
+
         .portfolio-item img {
             width: 100%;
             height: 280px;
             object-fit: cover;
             border-radius: 20px;
         }
-       
+
         .reel-container {
             aspect-ratio: 9 / 16;
             border-radius: 20px;
@@ -241,32 +224,30 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
-        /* TESTIMONIALS - FIXED */
-        .love-section {
-            background: linear-gradient(135deg, #fff0f3, #ffe4e9);
-        }
-       
-        .testimonials {
-            max-width: 100%;
-            margin: 0 auto;
+        /* TESTIMONIALS */
+        .love-section { background: linear-gradient(135deg, #fff0f3, #ffe4e9); }
+
+        .testimonials { max-width: 100%; margin: 0 auto; }
+
+        .testimonials-viewport {
             overflow: hidden;
         }
-       
+
         .slides {
             display: flex;
-            transition: transform 0.8s ease;
         }
-       
+
         .slide {
             min-width: 100%;
+            flex-shrink: 0;
             background: white;
             padding: 38px 25px;
             border-radius: 28px;
             box-shadow: 0 15px 50px rgba(156,28,43,0.1);
             text-align: center;
-            margin: 0 10px;
+            /* no margin — any margin breaks the 100% width math */
         }
-       
+
         .slide p {
             font-size: 16.5px;
             line-height: 1.75;
@@ -275,53 +256,30 @@
             word-break: break-word;
             overflow-wrap: break-word;
         }
-       
-        .slide-author {
-            font-weight: 600;
-            color: var(--crimson);
-            margin-bottom: 4px;
-        }
-       
-        .author-location {
-            color: #666;
-            font-size: 14px;
-        }
-       
-        .stars {
-            color: #f4c095;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-       
-        .dots {
-            text-align: center;
-            margin-top: 30px;
-        }
-       
+
+        .slide-author { font-weight: 600; color: var(--crimson); margin-bottom: 4px; }
+        .author-location { color: #666; font-size: 14px; }
+        .stars { color: #f4c095; font-size: 28px; margin-bottom: 20px; }
+
+        .dots { text-align: center; margin-top: 24px; }
         .dot {
             display: inline-block;
-            width: 10px;
-            height: 10px;
+            width: 10px; height: 10px;
             background: #ddd;
             border-radius: 50%;
             margin: 0 6px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
-       
-        .dot.active {
-            background: var(--crimson);
-            width: 13px;
-            height: 13px;
-        }
+        .dot.active { background: var(--crimson); width: 13px; height: 13px; }
 
         /* FOOTER */
         footer {
-           background: var(--crimson-dark);
+            background: var(--crimson-dark);
             color: #ddd;
             padding: 60px 20px 40px;
         }
-       
+
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -330,111 +288,52 @@
             gap: 40px;
             text-align: center;
         }
-       
         @media (min-width: 768px) {
             .footer-content { grid-template-columns: repeat(3, 1fr); text-align: left; }
         }
-       
-        .footer-col h3 {
-            color: var(--gold);
-            margin-bottom: 18px;
+
+        .footer-col h3 { color: var(--gold); margin-bottom: 18px; }
+
+        .social-icons { display: flex; justify-content: center; gap: 22px; margin-top: 15px; }
+        @media (min-width: 768px) { .social-icons { justify-content: flex-start; } }
+
+        .social-icons a { color: #fff; font-size: 26px; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--gold); }
+
+        /* Subtle sale link in footer */
+        .footer-sale-link {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            font-size: 13px;
         }
-       
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 22px;
-            margin-top: 15px;
-        }
-       
-        @media (min-width: 768px) {
-            .social-icons { justify-content: flex-start; }
-        }
-       
-        .social-icons a {
-            color: #ffffff;
-            font-size: 26px;
+        .footer-sale-link a {
+            color: rgba(244,192,149,0.45);
+            text-decoration: none;
             transition: color 0.3s;
         }
-       
-        .social-icons a:hover {
-            color: var(--gold);
-        }
+        .footer-sale-link a:hover { color: var(--gold); }
 
+        /* WHATSAPP FLOAT */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 20px; right: 20px;
             background: #25D366;
             color: white;
-            width: 58px;
-            height: 58px;
+            width: 58px; height: 58px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
             box-shadow: 0 8px 25px rgba(37,211,102,0.4);
             z-index: 999;
             text-decoration: none;
         }
 
-        /* POPUP */
-        .popup {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.75);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-            padding: 20px;
-        }
-       
-        .popup-content {
-            background: white;
-            max-width: 400px;
-            width: 100%;
-            border-radius: 24px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-       
-        .popup-content h2 {
-            color: var(--crimson);
-            margin-bottom: 15px;
-        }
-       
-        .popup-btn {
-            width: 100%;
-            padding: 16px;
-            background: var(--crimson);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            margin: 15px 0;
-            font-size: 16px;
-        }
-       
-        .popup-close {
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 15px;
-            cursor: pointer;
-        }
-
-        /* Mobile improvements */
         @media (max-width: 480px) {
-            .slide {
-                padding: 30px 20px;
-            }
-            .slide p {
-                font-size: 15.5px;
-            }
+            .slide { padding: 30px 20px; }
+            .slide p { font-size: 15.5px; }
         }
     </style>
 </head>
@@ -442,10 +341,9 @@
 
     <header>
         <div class="navbar">
-            <!-- Clickable Logo -->
-            <a href="#home" class="logo-link" style="text-decoration:none; color:inherit;">
-    <div class="logo">बेहुली Makeup</div>
-</a>
+            <a href="#home" class="logo-link">
+                <div class="logo">बेहुली Makeup</div>
+            </a>
             <div class="hamburger" id="hamburger">☰</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
@@ -459,28 +357,27 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#home" onclick="toggleMenu()">Home</a>
-        <a href="#services" onclick="toggleMenu()">Services</a>
-        <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
-        <a href="#instagram" onclick="toggleMenu()">Reels</a>
-        <a href="#reviews" onclick="toggleMenu()">Stories</a>
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+        <a href="#instagram" onclick="closeMenu()">Reels</a>
+        <a href="#reviews" onclick="closeMenu()">Stories</a>
     </div>
 
-    <!-- HERO -->
-    <!-- HERO -->
+    <!-- HERO — FIX: h2 → h1 for SEO -->
     <section class="hero" id="home">
         <div>
-            <h2 style="color: white;">फोटो नराम्रो आयो भने फेरि बिहे गर्न मिल्दैन है 😂</h2>
-            <p> बेहुली Makeup सँग मेकअप गराउनुहोस्! कहिल्यै रिग्रेट हुँदैन!!</p>
+            <h1>फोटो नराम्रो आयो भने फेरि बिहे गर्न मिल्दैन है 😂</h1>
+            <p>बेहुली Makeup सँग मेकअप गराउनुहोस्! कहिल्यै रिग्रेट हुँदैन!!</p>
             <a href="#services" class="btn">See Services & Prices</a>
         </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" style="background: var(--soft-pink);">
+    <section id="services">
         <h2>Our Signature Services</h2>
         <p class="section-subtitle">Premium makeup crafted for Nepali brides</p>
-       
         <div class="services-grid">
             <div class="service-card">
                 <span style="font-size:48px;">👰</span>
@@ -534,12 +431,11 @@
     <section id="portfolio">
         <h2>Nepali Bridal Portfolio</h2>
         <p class="section-subtitle">Real brides • Timeless red & gold • Modern elegance</p>
-       
         <div class="portfolio-grid">
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/12.jpg" alt="Bridal" loading="lazy"></div>
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/13.jpg" alt="Bridal" loading="lazy"></div>
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/15.jpg" alt="Bridal" loading="lazy"></div>
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/14.jpg" alt="Bridal" loading="lazy"></div>
+            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/12.jpg" alt="Bridal look 1" loading="lazy"></div>
+            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/13.jpg" alt="Bridal look 2" loading="lazy"></div>
+            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/15.jpg" alt="Bridal look 3" loading="lazy"></div>
+            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/14.jpg" alt="Bridal look 4" loading="lazy"></div>
         </div>
     </section>
 
@@ -547,7 +443,6 @@
     <section id="instagram" class="instagram-section">
         <h2>Behind the Glow ✨</h2>
         <p class="section-subtitle">Watch our latest Instagram Reels</p>
-       
         <div class="insta-grid">
             <div class="reel-container">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXf32AoEr3Q/" data-instgrm-version="14"></blockquote>
@@ -561,30 +456,32 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS - FIXED -->
+    <!-- TESTIMONIALS -->
     <section id="reviews" class="love-section">
         <h2>Love from Our Brides 💕</h2>
         <p class="section-subtitle">Heartfelt words from real Nepali queens</p>
-       
         <div class="testimonials">
-            <div class="slides" id="slides">
-                <div class="slide">
-                    <div class="stars">★★★★★</div>
-                    <p>"I felt like a real Nepali Queen! The makeup stayed perfect through all rituals. Best decision for my wedding."</p>
-                    <div class="slide-author">Sita Sharma</div>
-                    <div class="author-location">Kathmandu</div>
-                </div>
-                <div class="slide">
-                    <div class="stars">★★★★★</div>
-                    <p>"Perfect blend of tradition and modern glam. Everyone complimented my look all day long!"</p>
-                    <div class="slide-author">Anjali Thapa</div>
-                    <div class="author-location">Pokhara</div>
-                </div>
-                <div class="slide">
-                    <div class="stars">★★★★★</div>
-                    <p>"Incredible attention to detail. My photos still look flawless months later."</p>
-                    <div class="slide-author">Priya KC</div>
-                    <div class="author-location">Lalitpur</div>
+            <!-- FIX: added viewport wrapper so overflow:hidden doesn't clip box-shadow -->
+            <div class="testimonials-viewport">
+                <div class="slides" id="slides">
+                    <div class="slide">
+                        <div class="stars">★★★★★</div>
+                        <p>"I felt like a real Nepali Queen! The makeup stayed perfect through all rituals. Best decision for my wedding."</p>
+                        <div class="slide-author">Sita Sharma</div>
+                        <div class="author-location">Kathmandu</div>
+                    </div>
+                    <div class="slide">
+                        <div class="stars">★★★★★</div>
+                        <p>"Perfect blend of tradition and modern glam. Everyone complimented my look all day long!"</p>
+                        <div class="slide-author">Anjali Thapa</div>
+                        <div class="author-location">Pokhara</div>
+                    </div>
+                    <div class="slide">
+                        <div class="stars">★★★★★</div>
+                        <p>"Incredible attention to detail. My photos still look flawless months later."</p>
+                        <div class="slide-author">Priya KC</div>
+                        <div class="author-location">Lalitpur</div>
+                    </div>
                 </div>
             </div>
             <div class="dots" id="dots"></div>
@@ -600,7 +497,7 @@
             </div>
             <div class="footer-col">
                 <h3>Contact</h3>
-                <p> <strong style="color: var(--white);">WhatsApp: +1 564-888-3396</strong></p>
+                <p><strong>WhatsApp: +1 564-888-3396</strong></p>
                 <p>Email: diwaspandey524@gmail.com</p>
             </div>
             <div class="footer-col">
@@ -615,62 +512,41 @@
         <div style="text-align:center; margin-top:50px; font-size:14px; color:#888;">
             © 2026 बेहुली Makeup. All Rights Reserved.
         </div>
+        <!-- Subtle sale link — visible only to those looking -->
+        <div class="footer-sale-link">
+            <a href="mailto:diwaspandey524@gmail.com?subject=I%20want%20to%20buy%20Behuli%20Makeup%20Website%20-%2050k&body=Hi%20Diwas,%0A%0AI%20am%20interested%20in%20purchasing%20this%20complete%20Behuli%20Makeup%20website%20(with%20domain)%20for%20Rs.%2050%2C000.%0A%0APlease%20share%20the%20payment%20and%20transfer%20details.">
+                Interested in this website? It's available — Rs. 50,000
+            </a>
+        </div>
     </footer>
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/9779800000000" target="_blank" class="whatsapp-float" title="Book via WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="white">
-        <path d="M16 .5C7.7.5.5 7.2.5 15.6c0 2.7.7 5.2 2 7.4L.5 31.5l8.8-2.3c2.1 1.1 4.6 1.7 7.2 1.7 8.3 0 15.5-6.7 15.5-15.1C31.5 7.2 24.3.5 16 .5zm0 27.6c-2.3 0-4.5-.6-6.5-1.7l-.5-.3-5.2 1.4 1.4-5-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.3 6.3-13.3 14.1-13.3S30.1 7.7 30.1 15 23.8 28.1 16 28.1zm7.5-10.2c-.4-.2-2.3-1.1-2.7-1.2-.4-.1-.7-.2-1 .2-.3.4-1.1 1.2-1.3 1.4-.2.2-.5.2-.9 0-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7s-1-2.4-1.4-3.3c-.4-.9-.8-.8-1.1-.8h-.9c-.3 0-.8.1-1.2.6-.4.5-1.5 1.5-1.5 3.6s1.5 4.1 1.7 4.4c.2.3 3 4.6 7.3 6.4 1 .4 1.7.7 2.3.9 1 .3 1.9.3 2.6.2.8-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5z"/>
-    </svg>
-</a>
-
-    <!-- Sales Popup - For Selling Domain & Website -->
-<div id="domainPopup" class="popup">
-    <div class="popup-content">
-        <h2>Want This Exact Website?</h2>
-        <p style="font-size: 17px; margin: 18px 0 25px;">
-            Complete ready-to-use website + domain available for sale<br>
-            <strong style="color: var(--crimson); font-size: 19px;">Only Rs. 50,000</strong>
-        </p>
-        
-        <!-- Direct mailto button -->
-        <a href="mailto:diwaspandey524@gmail.com?subject=I%20want%20to%20buy%20Behuli%20Makeup%20Website%20-%2050k&body=Hi%20Diwas,%0A%0AI%20am%20interested%20in%20purchasing%20this%20complete%20Behuli%20Makeup%20website%20(with%20domain)%20for%20Rs.%2050,000.%0A%0APlease%20share%20the%20payment%20and%20transfer%20details." 
-           class="popup-btn" 
-           style="display: inline-block; text-decoration: none; text-align: center;">
-            Yes, I Want to Buy This Website
-        </a>
-        
-        <button onclick="closePopup()" class="popup-close">
-            No, thanks
-        </button>
-        
-        <p style="margin-top: 20px; font-size: 13.5px; color: #777;">
-            Includes: Full code, domain, design, and Instagram integration
-        </p>
-    </div>
-</div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="white">
+            <path d="M16 .5C7.7.5.5 7.2.5 15.6c0 2.7.7 5.2 2 7.4L.5 31.5l8.8-2.3c2.1 1.1 4.6 1.7 7.2 1.7 8.3 0 15.5-6.7 15.5-15.1C31.5 7.2 24.3.5 16 .5zm0 27.6c-2.3 0-4.5-.6-6.5-1.7l-.5-.3-5.2 1.4 1.4-5-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.3 6.3-13.3 14.1-13.3S30.1 7.7 30.1 15 23.8 28.1 16 28.1zm7.5-10.2c-.4-.2-2.3-1.1-2.7-1.2-.4-.1-.7-.2-1 .2-.3.4-1.1 1.2-1.3 1.4-.2.2-.5.2-.9 0-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7s-1-2.4-1.4-3.3c-.4-.9-.8-.8-1.1-.8h-.9c-.3 0-.8.1-1.2.6-.4.5-1.5 1.5-1.5 3.6s1.5 4.1 1.7 4.4c.2.3 3 4.6 7.3 6.4 1 .4 1.7.7 2.3.9 1 .3 1.9.3 2.6.2.8-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5z"/>
+        </svg>
+    </a>
 
     <script>
         // Mobile Menu
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
+        const menuClose = document.getElementById('menuClose');
 
-        function toggleMenu() {
-            if (mobileMenu) mobileMenu.classList.toggle('active');
-        }
+        function openMenu() { mobileMenu.classList.add('active'); }
+        function closeMenu() { mobileMenu.classList.remove('active'); }
 
-        if (hamburger) hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
 
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (mobileMenu) mobileMenu.classList.remove('active');
-            });
-        });
-
-        // Testimonial Slider
+        // Testimonial Slider — uses scrollLeft so pixel offset is always exact
         let currentSlide = 0;
-        const slidesContainer = document.getElementById('slides');
         const totalSlides = 3;
+        const viewport = document.querySelector('.testimonials-viewport');
+
+        // smooth scroll support via CSS
+        viewport.style.scrollBehavior = 'smooth';
+        viewport.style.overflowX = 'hidden';
 
         function createDots() {
             const dotsContainer = document.getElementById('dots');
@@ -687,49 +563,25 @@
 
         function goToSlide(n) {
             currentSlide = n;
-            if (slidesContainer) {
-                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }
+            const slideWidth = viewport.offsetWidth;
+            viewport.scrollLeft = slideWidth * currentSlide;
             document.querySelectorAll('.dot').forEach((dot, i) => {
                 dot.classList.toggle('active', i === currentSlide);
             });
         }
 
-        // Auto slide
         setInterval(() => {
             currentSlide = (currentSlide + 1) % totalSlides;
             goToSlide(currentSlide);
         }, 5200);
 
         // Instagram Embed
-        function loadInstagramEmbed() {
+        window.addEventListener('load', () => {
+            createDots();
             const s = document.createElement('script');
             s.src = "https://www.instagram.com/embed.js";
             s.async = true;
             document.body.appendChild(s);
-        }
-
-        // Popup
-        function showPopup() {
-            const popup = document.getElementById('domainPopup');
-            if (popup) popup.style.display = 'flex';
-        }
-
-        function closePopup() {
-            const popup = document.getElementById('domainPopup');
-            if (popup) popup.style.display = 'none';
-        }
-
-        function contactForWebsite() {
-    window.location.href = "mailto:diwaspandey524@gmail.com?subject=I%20want%20to%20buy%20Behuli%20Makeup%20Website%20-%2050k&body=Hi%20Diwash,%0A%0AI%20saw%20the%20Behuli%20Makeup%20website%20and%20I%20would%20like%20to%20purchase%20this%20complete%20website%20(with%20domain)%20for%20Rs.%2050,000.%0A%0APlease%20share%20the%20details.";
-    closePopup();
-}
-
-        // Initialize on load
-        window.addEventListener('load', () => {
-            createDots();
-            loadInstagramEmbed();
-            setTimeout(showPopup, 8000);
         });
     </script>
 </body>
