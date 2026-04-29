@@ -428,16 +428,88 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio">
-        <h2>Nepali Bridal Portfolio</h2>
-        <p class="section-subtitle">Real brides • Timeless red & gold • Modern elegance</p>
-        <div class="portfolio-grid">
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/12.jpg" alt="Bridal look 1" loading="lazy"></div>
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/13.jpg" alt="Bridal look 2" loading="lazy"></div>
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/15.jpg" alt="Bridal look 3" loading="lazy"></div>
-            <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/14.jpg" alt="Bridal look 4" loading="lazy"></div>
+    <style>
+    .see-more-item {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .see-more-item img {
+        filter: brightness(0.35);
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .see-more-item:hover img {
+        transform: scale(1.05);
+        filter: brightness(0.25);
+    }
+
+    .see-more-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(92, 10, 24, 0.45);
+        transition: background 0.4s ease;
+    }
+
+    .see-more-item:hover .see-more-overlay {
+        background: rgba(92, 10, 24, 0.6);
+    }
+
+    .see-more-content {
+        text-align: center;
+        color: white;
+        padding: 16px;
+    }
+
+    .see-more-content i {
+        font-size: 30px;
+        color: #f4c095;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .see-more-content span {
+        display: block;
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        letter-spacing: 0.01em;
+    }
+
+    .see-more-content small {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #f4c095;
+        opacity: 0.85;
+    }
+</style>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <h2>Nepali Bridal Portfolio</h2>
+    <p class="section-subtitle">Real brides • Timeless red & gold • Modern elegance</p>
+    <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/12.jpg" alt="Bridal look 1" loading="lazy"></div>
+        <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/13.jpg" alt="Bridal look 2" loading="lazy"></div>
+        <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/15.jpg" alt="Bridal look 3" loading="lazy"></div>
+        <div class="portfolio-item see-more-item" onclick="window.location.href='behuli-makeup.html'">
+            <img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/14.jpg" alt="Bridal look 4" loading="lazy">
+            <div class="see-more-overlay">
+                <div class="see-more-content">
+                    <i class="fas fa-images"></i>
+                    <span>See Full Portfolio</span>
+                    <small>View all bridal looks →</small>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- INSTAGRAM REELS -->
     <section id="instagram" class="instagram-section">
