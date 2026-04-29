@@ -428,23 +428,20 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <style>
+   <style>
     .see-more-item {
         position: relative;
         cursor: pointer;
         overflow: hidden;
     }
-
     .see-more-item img {
         filter: brightness(0.35);
         transition: transform 0.4s ease, filter 0.4s ease;
     }
-
     .see-more-item:hover img {
         transform: scale(1.05);
         filter: brightness(0.25);
     }
-
     .see-more-overlay {
         position: absolute;
         inset: 0;
@@ -454,33 +451,27 @@
         background: rgba(92, 10, 24, 0.45);
         transition: background 0.4s ease;
     }
-
     .see-more-item:hover .see-more-overlay {
         background: rgba(92, 10, 24, 0.6);
     }
-
     .see-more-content {
         text-align: center;
         color: white;
         padding: 16px;
     }
-
     .see-more-content i {
         font-size: 30px;
         color: #f4c095;
         display: block;
         margin-bottom: 12px;
     }
-
     .see-more-content span {
         display: block;
         font-family: 'Playfair Display', serif;
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 6px;
-        letter-spacing: 0.01em;
     }
-
     .see-more-content small {
         font-size: 12px;
         letter-spacing: 0.12em;
@@ -488,6 +479,91 @@
         color: #f4c095;
         opacity: 0.85;
     }
+
+    /* Clickable portfolio items */
+    .portfolio-item.clickable {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .portfolio-item.clickable img {
+        transition: transform 0.4s ease, filter 0.4s ease;
+        display: block;
+        width: 100%;
+    }
+    .portfolio-item.clickable:hover img {
+        transform: scale(1.04);
+        filter: brightness(0.8);
+    }
+    .portfolio-item.clickable .expand-icon {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .portfolio-item.clickable:hover .expand-icon {
+        opacity: 1;
+    }
+    .portfolio-item.clickable .expand-icon i {
+        font-size: 28px;
+        color: white;
+        background: rgba(92, 10, 24, 0.6);
+        width: 54px; height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Lightbox */
+    .portfolio-lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .portfolio-lightbox.open { display: flex; }
+    .portfolio-lightbox img {
+        max-width: 92vw;
+        max-height: 88vh;
+        border-radius: 8px;
+        object-fit: contain;
+        box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    }
+    .plb-close {
+        position: absolute;
+        top: 20px; right: 28px;
+        color: white;
+        font-size: 36px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        line-height: 1;
+        transition: color 0.2s;
+    }
+    .plb-close:hover { color: #f4c095; }
+    .plb-prev, .plb-next {
+        position: absolute;
+        top: 50%; transform: translateY(-50%);
+        background: rgba(156, 28, 43, 0.5);
+        border: none; color: white;
+        font-size: 22px;
+        width: 48px; height: 48px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        transition: background 0.2s;
+    }
+    .plb-prev:hover, .plb-next:hover { background: rgba(156, 28, 43, 0.9); }
+    .plb-prev { left: 20px; }
+    .plb-next { right: 20px; }
 </style>
 
 <!-- PORTFOLIO -->
@@ -495,9 +571,18 @@
     <h2>Nepali Bridal Portfolio</h2>
     <p class="section-subtitle">Real brides • Timeless red & gold • Modern elegance</p>
     <div class="portfolio-grid">
-        <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/12.jpg" alt="Bridal look 1" loading="lazy"></div>
-        <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/13.jpg" alt="Bridal look 2" loading="lazy"></div>
-        <div class="portfolio-item"><img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/15.jpg" alt="Bridal look 3" loading="lazy"></div>
+        <div class="portfolio-item clickable" onclick="openPLB(0)">
+            <img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/12.jpg" alt="Bridal look 1" loading="lazy">
+            <div class="expand-icon"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-item clickable" onclick="openPLB(1)">
+            <img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/13.jpg" alt="Bridal look 2" loading="lazy">
+            <div class="expand-icon"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-item clickable" onclick="openPLB(2)">
+            <img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/15.jpg" alt="Bridal look 3" loading="lazy">
+            <div class="expand-icon"><i class="fas fa-expand"></i></div>
+        </div>
         <div class="portfolio-item see-more-item" onclick="window.location.href='behuli-makeup.html'">
             <img src="https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/14.jpg" alt="Bridal look 4" loading="lazy">
             <div class="see-more-overlay">
@@ -510,6 +595,26 @@
         </div>
     </div>
 </section>
+
+<!-- Lightbox -->
+<div class="portfolio-lightbox" id="portfolioLightbox">
+    <button class="plb-close" onclick="closePLB()">✕</button>
+    <button class="plb-prev" onclick="stepPLB(-1)"><i class="fas fa-chevron-left"></i></button>
+    <img id="plbImg" src="" alt="Bridal look">
+    <button class="plb-next" onclick="stepPLB(1)"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<script>
+    const plbImages = [
+        'https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/12.jpg',
+        'https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/13.jpg',
+        'https://raw.githubusercontent.com/Diwas524/deepika.github.io/refs/heads/main/15.jpg',
+    ];
+    let plbIndex = 0;
+    const plbEl  = document.getElementById('portfolioLightbox');
+    con
+
+
 
     <!-- INSTAGRAM REELS -->
     <section id="instagram" class="instagram-section">
