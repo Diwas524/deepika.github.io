@@ -612,7 +612,34 @@
     ];
     let plbIndex = 0;
     const plbEl  = document.getElementById('portfolioLightbox');
-    con
+    const plbImg = document.getElementById('plbImg');
+
+    function openPLB(i) {
+        plbIndex = i;
+        plbImg.src = plbImages[i];
+        plbEl.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closePLB() {
+        plbEl.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    function stepPLB(dir) {
+        plbIndex = (plbIndex + dir + plbImages.length) % plbImages.length;
+        plbImg.src = plbImages[plbIndex];
+    }
+
+    // Close on backdrop click
+    plbEl.addEventListener('click', e => { if (e.target === plbEl) closePLB(); });
+
+    // Keyboard support
+    document.addEventListener('keydown', e => {
+        if (!plbEl.classList.contains('open')) return;
+        if (e.key === 'Escape')     closePLB();
+        if (e.key === 'ArrowLeft')  stepPLB(-1);
+        if (e.key === 'ArrowRight') stepPLB(1);
+    });
+</script>
 
 
 
